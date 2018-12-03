@@ -3,4 +3,28 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <item name="blue" type="color">#37acd7</item>
+    <item name="purple" type="color">#9d4fc4</item>
+    <item name="green" type="color">#75a313</item>
+    <item name="orange" type="color">#ffa033</item>
+    <item name="red" type="color">#ac292d</item>
+    <item name="darkblue" type="color">#0574be</item>
+    <item name="darkpurple" type="color">#e58f17ca</item>
+    <item name="darkgreen" type="color">#4a8c04</item>
+    <item name="darkorange" type="color">#d77300</item>
+    <item name="darkred" type="color">#992222</item>
+
+    <integer-array name="androidcolors">
+        <item>@color/blue</item>
+        <item>@color/purple</item>
+        <item>@color/green</item>
+        <item>@color/orange</item>
+        <item>@color/red</item>
+        <item>@color/darkblue</item>
+        <item>@color/darkpurple</item>
+        <item>@color/darkgreen</item>
+        <item>@color/darkorange</item>
+        <item>@color/darkred</item>
+    </integer-array>
 </resources>

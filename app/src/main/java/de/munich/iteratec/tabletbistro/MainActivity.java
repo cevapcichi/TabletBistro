@@ -15,6 +15,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
 import com.ahmadrosid.svgloader.SvgLoader;
@@ -27,6 +28,7 @@ import com.hsalf.smilerating.BaseRating;
 import com.hsalf.smilerating.SmileRating;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -55,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        setRandromBackground();
 
         //set counts to 0
         countAnswer1Text = countAnswer2Text = countAnswer3Text = countAnswer4Text =
@@ -455,6 +458,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Log.d("Fragentyp", "Fragentyp: "+ dataSnapshot.child("Fragentyp").getValue(String.class));
             break;
         }
+    }
+
+    public  void setRandromBackground(){
+        LinearLayout mainLayout = (LinearLayout) findViewById(R.id.mainLayout);
+        int[] androidColors = getResources().getIntArray(R.array.androidcolors);
+        int randomAndroidColor = androidColors[new Random().nextInt(androidColors.length)];
+        mainLayout.setBackgroundColor(randomAndroidColor);
     }
 }
 
